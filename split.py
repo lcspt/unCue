@@ -1,3 +1,5 @@
+# from github.com/Theldus/cue_to_flac.py
+
 import os
 import shutil
 
