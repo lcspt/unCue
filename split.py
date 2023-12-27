@@ -73,7 +73,6 @@ class split():
                 cmd += ' -t %.2d:%.2d:%.2d' % (track['duration'] / 60 / 60, track['duration'] / 60 % 60, int(track['duration'] % 60))
         
             cmd += ' ' + ' '.join('-metadata %s="%s"' % (k, v) for (k, v) in metadata.items())
-            #outfile = ' \"' + os.path.join(self.path, "%s - %.2d - %s - %s.flac" % (track['album'], track['track'],track['artist'], track['title'])) + '\"'
             outfile = "%s - %.2d - %s - %s.flac" % (track['album'], track['track'],track['artist'], track['title'])
             cmd +=  ' \"' + os.path.join(self.path, outfile) + '\"'
             self.outfiles.append(outfile)
